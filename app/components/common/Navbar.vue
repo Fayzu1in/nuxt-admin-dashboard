@@ -45,7 +45,7 @@ const breadcrumb = computed(() => {
 
     default:
       return {
-        parent: "Склад",
+        parent: "Главная",
         current: "",
       };
   }

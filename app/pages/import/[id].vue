@@ -44,7 +44,18 @@
     <div class="mt-[20px] border-t border-gray-200"></div>
     <div class="mt-[20px]"></div>
 
-    <div class="mt-[12px] mb-[20px] flex items-center gap-2">
+    <div class="relative w-full mt-[20px]">
+      <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+        >🔍</span
+      >
+      <input
+        type="text"
+        placeholder="Поиск"
+        class="w-full h-14 pl-12 pr-4 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none"
+      />
+    </div>
+
+    <div class="mt-[20px] mb-[20px] flex items-center gap-2">
       <UiActionButton
         variant="primary"
         label="Добавить товар"

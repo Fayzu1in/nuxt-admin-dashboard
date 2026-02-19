@@ -38,8 +38,9 @@
       >
         <h3 class="text-[20px] font-bold mb-4">Первые показы, %</h3>
 
-        <div class="h-[400px] w-full">
-          <ClientOnly>
+        <div class="h-[400px] w-full relative">
+          <div v-if="loading" class="absolute inset-0 shimmer rounded-xl"></div>
+          <ClientOnly v-else>
             <v-chart
               class="w-full h-full"
               :option="roseOption"
@@ -54,8 +55,10 @@
       >
         <h3 class="text-[20px] font-bold mb-4">Объем</h3>
 
-        <div class="h-[400px] w-full">
-          <ClientOnly>
+        <div class="h-[400px] w-full relative">
+          <div v-if="loading" class="absolute inset-0 shimmer rounded-xl"></div>
+
+          <ClientOnly v-else>
             <v-chart
               class="w-full h-full"
               :option="barOption"
@@ -228,3 +231,19 @@ onMounted(async () => {
 //   ],
 // });
 </script>
+<style scoped>
+.shimmer {
+  background: linear-gradient(90deg, #f3f3f3 25%, #e7e7e7 37%, #f3f3f3 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.3s ease infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+</style>
