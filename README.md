@@ -1,75 +1,90 @@
-# Nuxt Minimal Starter
+# 📊 Nuxt Admin Dashboard
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Тестовый админ-проект на Nuxt 3/4 с mock API.
 
-## Setup
+В проекте есть:
 
-Make sure to install dependencies:
+* Авторизация
+* Dashboard аналитики
+* Таблицы с пагинацией
+* Модалки и UI компоненты
+* Mock backend через server/api
 
-```bash
-# npm
+---
+
+## 🚀 Установка
+
 npm install
 
-# pnpm
-pnpm install
+---
 
-# yarn
-yarn install
+## ▶️ Запуск проекта
 
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
 
-# pnpm
-pnpm dev
+Открыть в браузере:
+http://localhost:3000
 
-# yarn
-yarn dev
+---
 
-# bun
-bun run dev
-```
+## 🏗 Сборка production
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
 npm run preview
 
-# pnpm
-pnpm preview
+---
 
-# yarn
-yarn preview
+## 📁 Структура проекта
 
-# bun
-bun run preview
-```
+app/ – корень приложения
+components/ – UI компоненты (DataTable, UiModal и т.д.)
+pages/ – страницы
+stores/ – Pinia store
+composables/ – composables
+services/ – axios методы API
+server/api/ – mock API
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+---
+
+## 📦 Mock API
+
+Все мок-данные лежат в папке:
+
+server/api/
+
+Примеры:
+
+* auth/login.post.ts
+* imports.get.ts
+* imports/[id].get.ts
+* analytics.get.ts
+
+Mock API имитирует backend и позволяет запускать проект без реального сервера.
+
+---
+
+## ⚙️ Env переменные
+
+.env файл не требуется для запуска mock версии.
+
+Если подключать реальный API, можно добавить:
+
+API_URL=https://example.com
+
+---
+
+## 🛠 Используемые технологии
+
+Nuxt 3 / Nuxt 4
+Vue 3 + Composition API
+Pinia
+Axios
+TailwindCSS
+ECharts
+Mock API через Nitro server/api
+
+---
+
+## 👤 Автор
+
+Sherik Fayzulin
